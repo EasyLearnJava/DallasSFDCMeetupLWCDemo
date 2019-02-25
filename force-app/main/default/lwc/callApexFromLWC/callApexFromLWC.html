@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  title="Call Apex" icon-name="custom:custom3">
+        <div class="slds-m-around_medium">
+            <template if:true={tempValue.data}>
+                Data sent from Server : {tempValue.data}                 
+            </template>
+            <template if:true={tempValue.error}>
+                <c-error-panel errors={tempValue.error}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>
+</template>
