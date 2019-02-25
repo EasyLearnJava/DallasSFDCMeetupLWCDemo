@@ -3,6 +3,9 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/call-apex-from-lwc-demo": [
+                "callApexFromLWCDemo/callApexFromLWCDemo.js"
+            ],
             "c/hello-binding-demo": [
                 "helloBindingDemo/helloBindingDemo.js"
             ],
