@@ -1,0 +1,31 @@
+<template>
+        <lightning-card  title="Search Accounts" icon-name="custom:custom4">
+            <div class="slds-m-around_medium">
+                <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small"
+                    label="Search" value={searchKey}
+                ></lightning-input>
+                <lightning-layout multiple-rows="true" pull-to-boundary="small">
+                <template if:true={accountsFetched.data}>
+                    <template for:each={accountsFetched.data} for:item="acc">
+                      <lightning-layout-item key={acc.Id} size="3" class="slds-p-around_x-small">
+                         <c-accounts-tile key={acc.Id} onselectedaccount={handleSelectedAcc} account={acc}></c-accounts-tile>
+                    </lightning-layout-item>
+                    </template>
+                </template>
+                <template if:true={accountsFetched.error}>
+                        <p> Error while Fetching Accounts : {accountsFetched.error.body.message}> </p>
+                    </template>
+            </lightning-layout>
+            </div>
+            <div class="slds-m-around_medium">
+                <lightning-layout-item padding="around-small">
+                    <template if:true={accountDetails}>
+                        <p>{accountDetails.Name}</p>
+                        <p>{accountDetails.Phone}</p>
+                        <p>{accountDetails.Type}</p>
+                        <p>{accountDetails.Website}</p>
+                    </template>
+                </lightning-layout-item>
+            </div>
+        </lightning-card>
+    </template>

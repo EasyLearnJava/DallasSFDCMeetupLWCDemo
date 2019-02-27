@@ -3,6 +3,12 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/account-events-demo": [
+                "accountEventsDemo/accountEventsDemo.js"
+            ],
+            "c/accounts-tile": [
+                "accountsTile/accountsTile.js"
+            ],
             "c/call-apex-from-lwc-demo": [
                 "callApexFromLWCDemo/callApexFromLWCDemo.js"
             ],
