@@ -11,6 +11,9 @@
             ],
             "c/hello-world-demo": [
                 "helloWorldDemo/helloWorldDemo.js"
+            ],
+            "c/search-accounts-demo": [
+                "searchAccountsDemo/searchAccountsDemo.js"
             ]
         }
     },

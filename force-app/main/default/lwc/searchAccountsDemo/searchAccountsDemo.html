@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  title="Search Accounts" icon-name="custom:custom4">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small"
+                label="Search" value={searchKey}
+            ></lightning-input>
+            <template if:true={accountsFetched.data}>
+                <template for:each={accountsFetched.data} for:item="acc">
+                    <p key={acc.Id}>{acc.Name}</p>
+                </template>
+            </template>
+            <template if:true={accountsFetched.error}>
+                <c-error-panel errors={accountsFetched.error}></c-error-panel>
+            </template>
+        </div>
+    </lightning-card>
+</template>
